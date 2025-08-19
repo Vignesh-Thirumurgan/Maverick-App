@@ -23,7 +23,7 @@ if not GEMINI_API_KEY:
 
 genai.configure(api_key=GEMINI_API_KEY)
 
-@app.route('/extract-skills', methods=['POST'])
+@app.route('/extract-skills', methods=['POST','GET'])
 def extract_skills():
     """
     Receives a PDF file, extracts text, and uses Gemini API to identify skills.
@@ -99,5 +99,5 @@ Focus on specific, quantifiable technical skills. Provide the output as a JSON a
 if __name__ == '__main__':
     # For local development, run on port 5000.
     # Ensure your frontend fetches from this URL.
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=5000, host='0.0.0.0')
 

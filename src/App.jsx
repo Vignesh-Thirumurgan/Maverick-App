@@ -208,7 +208,7 @@ const ProfileSetup = ({ setCurrentPage }) => {
 
         try {
             // IMPORTANT: Replace with the actual URL where your Flask backend is running
-            const backendUrl = 'http://localhost:5000/extract-skills';
+            const backendUrl = `${import.meta.env.VITE_BACKEND_URL}/extract-skills`;
 
             const response = await fetch(backendUrl, {
                 method: 'POST',
