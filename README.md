@@ -5,7 +5,7 @@ This is clone of a project Maverick-Assessment added docker-compose file,so you 
 services:
     maverik:
         image: maverick
-        container_name: maverick
+        container_name: craze477/maverick
         restart: always
         ports:
           - "5173:5173"
@@ -14,7 +14,7 @@ services:
     
     backend:
         image: backend
-        container_name: backend
+        container_name: craze477/backend
         restart: always
         ports:
           - "5000:5000"
